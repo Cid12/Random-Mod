@@ -1,5 +1,13 @@
 package com.keepers.tharandommod;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+import com.keepers.tharandommod.blocks.TrmbHiddenTrapDoor;
 import com.keepers.tharandommod.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -9,6 +17,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid="randommod", name="Tha Random Mod", version="0.0.1")
 public class ThaRandomMod {
@@ -19,24 +28,37 @@ public class ThaRandomMod {
         @Instance(value = "randommod")
         public static ThaRandomMod instance;
         
-        // Says where the client and server 'proxy' code is loaded.
         @SidedProxy(clientSide="com.keepers.tharandommod.proxy.ClientProxy", serverSide="com.keepers.tharandommod.proxy.CommonProxy")
         public static CommonProxy proxy;
         
-        @EventHandler // used in 1.6.2
-        //@PreInit    // used in 1.5.2
+        //Adding creative tab randomTab to minecraft
+        public static CreativeTabs randomTab = new CreativeTabs("randomTab") {
+			
+			public Item getTabIconItem() {
+				return Items.apple;
+			}
+    };
+    
+    //Blocks
+    public static Block hiddenTrapDoor;
+       
+        @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
-                // Stub Method
+                //Put code here;
+        	
+        	//Defines blocks in Minecraft
+        	hiddenTrapDoor = new TrmbHiddenTrapDoor(Material.wood);
+        	
+        	//Registers blocks in Minecraft
+        	GameRegistry.registerBlock(hiddenTrapDoor, "hiddenTrapDoor");
         }
         
-        @EventHandler // used in 1.6.2
-        //@Init       // used in 1.5.2
+        @EventHandler
         public void load(FMLInitializationEvent event) {
                 proxy.registerRenderers();
         }
         
-        @EventHandler // used in 1.6.2
-        //@PostInit   // used in 1.5.2
+        @EventHandler
         public void postInit(FMLPostInitializationEvent event) {
                 // Stub Method
         }
