@@ -1,9 +1,9 @@
-tile.hiddenTrapDoor.name= Hidden Trap Door Oak
-tile.hiddenTrapDoorBirch.name= Hidden Trap Door Birch
-tile.hiddenTrapDoorSpruce.name= Hidden Trap Door Spruce
-tile.hiddenTrapDoorJungle.name= Hidden Trap Door Jungle
-tile.hiddenTrapDoorAcacia.name= Hidden Trap Door Acacia
-tile.hiddenTrapDoorBigOak.name= Hidden Trap Door Dark Oak
-tile.hiddenTrapDoorStone.name= Hidden Trap Door Stone
-tile.hiddenTrapDoorCobblestone.name= Hidden Trap Door Cobblestone
+tile.hiddenTrapDoor.name= Hidden Oak Trap Door 
+tile.hiddenTrapDoorBirch.name= Hidden Birch Trap Door 
+tile.hiddenTrapDoorSpruce.name= Hidden Spruce Trap Door 
+tile.hiddenTrapDoorJungle.name= Hidden Jungle Trap Door
+tile.hiddenTrapDoorAcacia.name= Hidden Acacia Trap Door
+tile.hiddenTrapDoorBigOak.name= Hidden Dark Oak Trap Door
+tile.hiddenTrapDoorStone.name= Hidden Stone Trap Door
+tile.hiddenTrapDoorCobblestone.name= Hidden Cobblestone Trap Door
 itemGroup.randomTrapTab= Random Trap Doors
