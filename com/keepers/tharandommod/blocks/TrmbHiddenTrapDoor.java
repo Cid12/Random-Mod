@@ -5,6 +5,7 @@ import com.keepers.tharandommod.ThaRandomMod;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTrapDoor;
 import net.minecraft.block.material.Material;
+import net.minecraft.init.Blocks;
 
 public class TrmbHiddenTrapDoor extends BlockTrapDoor {
 
@@ -44,6 +45,10 @@ public class TrmbHiddenTrapDoor extends BlockTrapDoor {
 		
 		if(type == 7)
 			 setBlockTextureName("cobblestone");
+		setStepSound(soundTypePiston);
+		
+		if(type == 8)
+			 setBlockTextureName("stonebrick");
 		setStepSound(soundTypePiston);
 		
 		

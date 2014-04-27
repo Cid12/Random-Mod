@@ -6,4 +6,5 @@ tile.hiddenTrapDoorAcacia.name= Hidden Acacia Trap Door
 tile.hiddenTrapDoorBigOak.name= Hidden Dark Oak Trap Door
 tile.hiddenTrapDoorStone.name= Hidden Stone Trap Door
 tile.hiddenTrapDoorCobblestone.name= Hidden Cobblestone Trap Door
+tile.hiddenTrapDoorStoneBrick.name= Hidden Stone Brick Trap Door
 itemGroup.randomTrapTab= Random Trap Doors

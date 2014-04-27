@@ -44,6 +44,7 @@ public class ThaRandomMod {
         //Stone hidden trap doors
         public static Block hiddenTrapDoor6;
         public static Block hiddenTrapDoor7;
+        public static Block hiddenTrapDoor8;
         
         //Adding creative tab randomTab to minecraft
         public static CreativeTabs randomtTrapTab = new CreativeTabs("randomTrapTab") {
@@ -70,6 +71,8 @@ public class ThaRandomMod {
         	//Stone hidden trap doors
         	hiddenTrapDoor6 = new TrmbHiddenTrapDoor(Material.rock, 6).setBlockName("hiddenTrapDoorStone");
         	hiddenTrapDoor7 = new TrmbHiddenTrapDoor(Material.rock, 7).setBlockName("hiddenTrapDoorCobblestone");
+        	hiddenTrapDoor8 = new TrmbHiddenTrapDoor(Material.rock, 8).setBlockName("hiddenTrapDoorStoneBrick");
+
         	
         	//Registers blocks in Minecraft
         	GameRegistry.registerBlock(hiddenTrapDoor, "hiddenTrapDoor");
@@ -80,6 +83,8 @@ public class ThaRandomMod {
         	GameRegistry.registerBlock(hiddenTrapDoor5, "hiddenTrapDoor5");
         	GameRegistry.registerBlock(hiddenTrapDoor6, "hiddenTrapDoor6");
         	GameRegistry.registerBlock(hiddenTrapDoor7, "hiddenTrapDoor7");
+        	GameRegistry.registerBlock(hiddenTrapDoor8, "hiddenTrapDoor8");
+
 
         }
         
