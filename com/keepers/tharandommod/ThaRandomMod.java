@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.keepers.tharandommod.blocks.TrmbHiddenTrapDoor;
+import com.keepers.tharandommod.items.TrmiSpikySnowball;
 import com.keepers.tharandommod.proxy.CommonProxy;
 
 import cpw.mods.fml.common.Mod;
@@ -45,16 +46,10 @@ public class ThaRandomMod {
         public static Block hiddenTrapDoor6;
         public static Block hiddenTrapDoor7;
         public static Block hiddenTrapDoor8;
-        
-        //Adding creative tab randomTab to minecraft
-        public static CreativeTabs randomtTrapTab = new CreativeTabs("randomTrapTab") {
-			
-			public Item getTabIconItem() {
-				return Item.getItemFromBlock(hiddenTrapDoor);
-			}
-    };
-    
 
+        //Items
+        
+        public static Item spikySnowball;
 
        
         @EventHandler
@@ -72,6 +67,10 @@ public class ThaRandomMod {
         	hiddenTrapDoor6 = new TrmbHiddenTrapDoor(Material.rock, 6).setBlockName("hiddenTrapDoorStone");
         	hiddenTrapDoor7 = new TrmbHiddenTrapDoor(Material.rock, 7).setBlockName("hiddenTrapDoorCobblestone");
         	hiddenTrapDoor8 = new TrmbHiddenTrapDoor(Material.rock, 8).setBlockName("hiddenTrapDoorStoneBrick");
+        	
+        	//Defines items in Minecraft
+        	spikySnowball = new TrmiSpikySnowball();
+
 
         	
         	//Registers blocks in Minecraft
@@ -84,8 +83,9 @@ public class ThaRandomMod {
         	GameRegistry.registerBlock(hiddenTrapDoor6, "hiddenTrapDoor6");
         	GameRegistry.registerBlock(hiddenTrapDoor7, "hiddenTrapDoor7");
         	GameRegistry.registerBlock(hiddenTrapDoor8, "hiddenTrapDoor8");
-
-
+        	
+        	//Registers items in Minecraft
+        	GameRegistry.registerItem(spikySnowball, "spikySnowball");
         }
         
         @EventHandler
@@ -97,7 +97,11 @@ public class ThaRandomMod {
         public void postInit(FMLPostInitializationEvent event) {
                 // Stub Method
         }
+
+
 }
+
+
 
 /*
 Enforced Armor

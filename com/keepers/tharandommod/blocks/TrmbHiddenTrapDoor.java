@@ -1,6 +1,7 @@
 package com.keepers.tharandommod.blocks;
 
 import com.keepers.tharandommod.ThaRandomMod;
+import com.keepers.tharandommod.creativetabs.TrmCreativeTab;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockTrapDoor;
@@ -13,7 +14,7 @@ public class TrmbHiddenTrapDoor extends BlockTrapDoor {
 	public TrmbHiddenTrapDoor(Material mat, int type) {
 		super(mat);
 		setHardness(1.0F);
-		setCreativeTab(m.randomtTrapTab);
+		setCreativeTab(TrmCreativeTab.randomTrapTab);
 		
 		if(type == 0)
 			setBlockTextureName("planks_oak");
