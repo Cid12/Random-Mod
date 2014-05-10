@@ -1,6 +1,8 @@
 
 package com.keepers.tharandommod.entities;
 
+import com.keepers.tharandommod.renders.RenderParticleEffects;
+
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityBlaze;
 import net.minecraft.entity.projectile.EntityThrowable;
@@ -10,6 +12,8 @@ import net.minecraft.world.World;
 
 public class EntitySpikySnowball extends EntityThrowable {
 
+    private static final String __OBFID = "CL_000047465";
+	
 	public EntitySpikySnowball(World par1World) {
 		super(par1World);
 	}
@@ -39,10 +43,11 @@ public class EntitySpikySnowball extends EntityThrowable {
 
 		for (int i = 0; i < 8; ++i)
         {
-            this.worldObj.spawnParticle("snowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
+            RenderParticleEffects.spawnParticle("spikysnowballpoof", this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D);
         }
 
-		if (!this.worldObj.isRemote) {
+		if (!this.worldObj.isRemote) 
+		{
             this.setDead();
         }
 	}

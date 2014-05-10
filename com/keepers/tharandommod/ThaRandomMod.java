@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.keepers.tharandommod.blocks.TrmbHiddenTrapDoor;
+import com.keepers.tharandommod.entities.EntitySpikySnowball;
 import com.keepers.tharandommod.items.TrmiSpikySnowball;
 import com.keepers.tharandommod.proxy.CommonProxy;
 
@@ -18,6 +19,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid="randommod", name="Tha Random Mod", version="0.0.1")
@@ -50,6 +52,9 @@ public class ThaRandomMod {
         //Items
         
         public static Item spikySnowball;
+        
+        //IDS
+        int spikySnowballID = 0;
 
        
         @EventHandler
@@ -71,21 +76,14 @@ public class ThaRandomMod {
         	//Defines items in Minecraft
         	spikySnowball = new TrmiSpikySnowball();
 
-
-        	
-        	//Registers blocks in Minecraft
-        	GameRegistry.registerBlock(hiddenTrapDoor, "hiddenTrapDoor");
-        	GameRegistry.registerBlock(hiddenTrapDoor1, "hiddenTrapDoor1");
-        	GameRegistry.registerBlock(hiddenTrapDoor2, "hiddenTrapDoor2");
-        	GameRegistry.registerBlock(hiddenTrapDoor3, "hiddenTrapDoor3");
-        	GameRegistry.registerBlock(hiddenTrapDoor4, "hiddenTrapDoor4");
-        	GameRegistry.registerBlock(hiddenTrapDoor5, "hiddenTrapDoor5");
-        	GameRegistry.registerBlock(hiddenTrapDoor6, "hiddenTrapDoor6");
-        	GameRegistry.registerBlock(hiddenTrapDoor7, "hiddenTrapDoor7");
-        	GameRegistry.registerBlock(hiddenTrapDoor8, "hiddenTrapDoor8");
+        	//Entities
+        	EntityRegistry.registerModEntity(EntitySpikySnowball.class, "Spiky SnowBall", ++spikySnowballID, this, 64, 10, true);
         	
         	//Registers items in Minecraft
         	GameRegistry.registerItem(spikySnowball, "spikySnowball");
+        	
+        	Register.addTrapdoorRegistrations();
+        	
         }
         
         @EventHandler
